@@ -1,24 +1,27 @@
+import Link from "next/link";
+
 function Landing() {
   return (
     <>
-      <div className="flex gap-4 m-7  ">
+      <div className="flex gap-10 max-w-7xl mx-auto  items-center ">
         <div className="flex align-middle  gap-6 flex-col">
-          <h1 className="text-8xl font-light text-cyan-700 mt-3">Welcome </h1>{" "}
-          <br />
-          <h1 className="text-8xl font-bold ">
-            Healing <span className="text-cyan-700"> Hands</span> , Caring{" "}
-            <span className="text-cyan-700">Hearts</span>{" "}
+          <h1 className="text-7xl font-bold ">
+            Healing <span className="text-cyan-700"> Hands</span> <br />
+            Caring <span className="text-cyan-700">Hearts</span>
           </h1>
-          <p className="m-6 text-3xl font-medium text-center ">
-            Your journey to better health starts here . Schedule a consultation
-            with Dr.Aknouche , a trusted expert dedicated to providing
-            compassionate and personalized care .
+          <p className="my-8 text-3xl font-medium text-justify leading-10 mr-20 ">
+            Your journey to better health starts here. <br />
+            Schedule a consultation with Dr.Aknouche, a trusted expert dedicated
+            to providing compassionate and personalized care.
           </p>{" "}
-          <div className="text-center">
-            <button className="m-5 font-light rounded-full text-xl p-4 border-2 border-gray-500 text-white bg-cyan-700  ">
+          <div className=" flex gap-5">
+            <Link
+              href="/booking"
+              className=" font-light rounded-full text-xl p-4 border-2 hover:bg-white hover:text-black border-gray-500 text-white bg-cyan-700  "
+            >
               Book an Appointment
-            </button>
-            <button className="rounded-full font-light text-xl ml-9 p-4 border-2 border-cyan-950 ">
+            </Link>
+            <button className="rounded-full font-light text-xl  hover:bg-cyan-700 hover:text-white p-4 border-2 border-cyan-950 ">
               Contact Us
             </button>
           </div>
@@ -26,36 +29,38 @@ function Landing() {
         <img
           src="HeroSection.jpg"
           alt="img"
-          className="rounded-2xl h-[800px]  "
+          className="rounded-2xl h-[600px]  "
         />{" "}
       </div>
-      <hr />
-      <div className="m-7 flex gap-5 ">
+
+      <div className="my-28 flex gap-5 max-w-7xl mx-auto ">
         <img src="steto.jpg" alt="image" className="rounded-xl h-[400px]" />
         <div className="flex flex-col mx-auto p-16 ">
-          <h1 className="text-4xl font-bold m-4 text-left text-cyan-700 ">
+          <h1 className="text-4xl font-bold mb-6 text-left text-cyan-700 ">
             {" "}
             Why Book With Us ?{" "}
           </h1>
-          <ul className="flex flex-col gap-10 ">
+          <ul className="space-y-3 ">
             <li>
-              <span className="text-xl font-semibold">Easy Scheduling:</span> a
+              <span className=" font-semibold">Easy Scheduling:</span> a
               seamless process to book appointments im minutes{" "}
             </li>
             <li>
-              <span className="text-xl font-semibold">
-                Trusted Professional:
-              </span>{" "}
+              <span className=" font-semibold">Trusted Professional:</span>{" "}
               qualified and experienced specialist
             </li>
             <li>
-              <span className="text-xl font-semibold">
-                {" "}
-                No Long Wait Times:
-              </span>{" "}
-              get care when you need it most
+              <span className=" font-semibold"> No Long Wait Times:</span> get
+              care when you need it most
             </li>
           </ul>
+          <Link
+            className="rounded-full m-6 p-3 text-center border border-gray-500 text-xl font-light hover:bg-cyan-700 hover:text-white "
+            href={"/booking"}
+          >
+            {" "}
+            Book Now !
+          </Link>
         </div>
       </div>
     </>

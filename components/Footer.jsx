@@ -1,29 +1,33 @@
+import Link from "next/link";
+
 function Footer() {
   return (
     <>
-      <footer className="border-t border-black mt-20">
-        <div className="flex p-3 justify-between ">
-          <div className="flex flex-col">
-            <img src="logo.png" alt="logo" className="w-[200px] " />
-            <ul className="text-lg items-center">
+      <footer className="border-t border-black mt-20 max-w-7xl mx-auto">
+        <div className="flex p-3 justify-between text-cyan-950">
+          <Link href={"/"}>
+            <img src="logo.png" alt="logo" className="h-[80px] mt-6 " />
+          </Link>
+
+          <div className="mt-6">
+            <h1 className="font-bold text-lg underline ">Contact : </h1>
+            <ul className="text-lg align-middle ">
               <li>
-                <span className="font-semibold text-cyan-950">
-                  Phone Number:
-                </span>
+                <span className="font-semibold">Phone Number:</span>
                 +213000500201
               </li>
               <li>
-                <span className=" font-semibold text-cyan-950">Email: </span>
+                <span className=" font-semibold">Email: </span>
                 healwellclinic@gmail.com
               </li>
               <li>
-                <span className=" font-semibold text-cyan-950">Adress: </span>
+                <span className=" font-semibold">Adress: </span>
                 cite 822 log LPP Amirouche Reghaia Alger
               </li>
             </ul>
           </div>
-          <div className="text-center m-10">
-            <h1 className="text-lg m-3 underline"> Social Media: </h1>
+          <div className="text-center m-6">
+            <h1 className="text-lg m-3 underline font-bold"> Social Media: </h1>
             <ul className="flex gap-4 ">
               <li>
                 {" "}
